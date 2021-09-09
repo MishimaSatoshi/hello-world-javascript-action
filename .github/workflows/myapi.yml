@@ -1,0 +1,13 @@
+name: build
+
+on:
+  repository_dispatch:
+    types: [build]
+  push:
+    branches:
+      - master
+jobs:
+  my-api:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event.action }}"
