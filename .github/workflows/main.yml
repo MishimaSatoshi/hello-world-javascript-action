@@ -1,4 +1,9 @@
-on: [push]
+on:
+　repository_dispatch:
+   typs:[build]
+ push:
+   branches:
+     - master
 
 jobs:
   hello_world_job:
